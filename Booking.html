@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pembayaran Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(160deg, #0b0f1a, #10182f);
+            color: #eaeaea;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 100px auto;
+            background: rgba(255,255,255,0.06);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(94,231,255,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            color: #5ee7ff;
+            margin-bottom: 30px;
+        }
+
+        .info p {
+            font-size: 14px;
+            margin: 8px 0;
+            color: #cfd8ff;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            border-radius: 14px;
+            border: none;
+            background: #5ee7ff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #38cde3;
+        }
+
+        .success {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: #7CFF9B;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Forum Pembayaran</h2>
+
+    <div class="info">
+        <p><b>Nama:</b> <span id="nama"></span></p>
+        <p><b>Tanggal:</b> <span id="tanggal"></span></p>
+        <p><b>Jumlah Pengunjung:</b> <span id="jumlah"></span></p>
+    </div>
+
+    <select required>
+        <option value="">Pilih Metode Pembayaran</option>
+        <option>Transfer Bank</option>
+        <option>QRIS</option>
+        <option>E-Wallet (OVO / DANA / GoPay)</option>
+    </select>
+
+    <input type="text" placeholder="Nama Pemilik Rekening / Akun" required>
+
+    <button onclick="prosesBayar()">Bayar Sekarang</button>
+
+    <div class="success" id="success">
+        ✅ Pembayaran berhasil!  
+        <br>Terima kasih telah booking.
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nama").innerText = params.get("nama");
+    document.getElementById("tanggal").innerText = params.get("tanggal");
+    document.getElementById("jumlah").innerText = params.get("jumlah");
+
+    function prosesBayar() {
+        document.getElementById("success").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
