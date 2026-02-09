@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pangandaran Future Coast</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+		html {
+            scroll-behavior: smooth; 
+        }
+        body {
+            background: #0b0f1a;
+            color: #eaeaea;
+        }
+
+        /* HEADER */
+        header {
+            padding: 80px 10%;
+            background: radial-gradient(circle at top, #1b2b52, #0b0f1a 70%);
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 12px;
+            font-size: 18px;
+            color: #9bbcff;
+        }
+		
+		header {
+		position: relative;
+		}
+		
+        /* NAV */
+            nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 18px;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000; 
+        }
+
+        nav a {
+            color: #eaeaea;
+            text-decoration: none;
+            font-size: 15px;
+            position: relative;
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(94,231,255,0.2); 
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #5ee7ff;
+            left: 0;
+            bottom: -6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+		
+		 /* SECTION */
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            background-image: url('https://asita.id/wp-content/uploads/2024/08/pangandaran-pantai.jpg'); /* Ganti dengan URL gambar pantai Pangandaran */
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 30%;
+            height: auto;
+        }
+        .attraction {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		        /* SECTION */
+       /* SECTION */
+        section {
+            padding: 80px 10%;
+            scroll-margin-top: 90px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #5ee7ff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 40px rgba(94,231,255,0.08);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 0 60px rgba(94,231,255,0.25);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #cfd8ff;
+            line-height: 1.6;
+        }
+		.card {
+			cursor: pointer;
+		}
+
+		form input {
+			width: 100%;
+			padding: 12px;
+			margin-top: 12px;
+			border-radius: 10px;
+			border: none;
+		}
+
+		form button {
+			margin-top: 15px;
+			background: #5ee7ff;
+			color: #000;
+			font-weight: 600;
+			border-radius: 12px;
+		}
+		
+		/*LOGO*/
+			.logo-container {
+			position: absolute;
+			top: 30px;
+			right: 10%;
+			z-index: 2000;
+		}
+
+		.logo-container img {
+		width: 150px;
+		height: auto;
+		filter: drop-shadow(0 0 12px rgba(94,231,255,0.6));
+		transition: 0.4s ease;
+		}
+
+		.logo-container img:hover {
+			transform: scale(1.08) rotate(-2deg);
+			filter: drop-shadow(0 0 22px rgba(94,231,255,0.9));
+		}
+		
+		@media (max-width: 768px) {
+			.logo-container img {
+			width: 75px;
+			}
+		}
+		
+       /* FOOTER */
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><center>Selamat Datang di Pangandaran</center></h1>
+        <p><center>Surga Wisata Pantai di Jawa Barat</center></p>
+		<div class="logo-container">
+			<a href="#">
+			<img src="logo pangandaran.png" alt="Logo Pangandaran">
+			</a>
+		</div>
+    </header>
+    <nav>
+        <a href="#pantai">Pantai</a>
+        <a href="#wisata">Wisata</a>
+		<a href="#kuliner">Kuliner</a>
+		<a href="#booking">Booking</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+    
+   <section id="pantai">
+    <h2>Pantai</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Pantai Pangandaran</h3>
+            <p>Pantai Pangandaran adalah salah satu objek wisata terkenal di Jawa Barat yang terletak di Kabupaten Pangandaran. Pantai ini memiliki pasir putih kecokelatan, ombak yang relatif tenang, dan pemandangan matahari terbit serta terbenam yang indah. Pantai Pangandaran juga dilengkapi berbagai fasilitas wisata dan aktivitas seperti berenang dan perahu wisata. <p>
+        </div>
+        <div class="card">
+            <h3>Pantai Pasir Putih</h3>
+            <p>Pantai Pasir Putih Pangandaran merupakan pantai yang berada dipantai selatan diwilayah Pangandaran, dimana obyek wisata Pangandaran menjadi salah satu primadona tempat wisata di Pangandaran.</p>
+        </div>
+        <div class="card">
+            <h3>Pantai Batu Hiu</h3>
+            <p>Pantai Batu Hiu merupakan objek wisata alam yang terletak di Pangandaran, Jawa Barat. Pantai ini dikenal dengan batu karang besar di tengah laut yang bentuknya menyerupai sirip hiu. Pemandangan laut yang luas dan ombak yang besar menjadi daya tarik utama pantai ini. Selain itu, Pantai Batu Hiu sering disebut sebagai “Tanah Lot”-nya Jawa Barat karena keindahannya.</p>
+        </div>
+    </div>
+</section>
+
+<section id="wisata">
+    <h2>Wisata</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Cagar Alam</h3>
+            <p>Cagar alam adalah kawasan yang dilindungi untuk menjaga kelestarian tumbuhan, hewan, dan ekosistem alaminya. Kawasan ini ditetapkan oleh pemerintah agar tidak mengalami kerusakan akibat aktivitas manusia. Pemanfaatan cagar alam sangat dibatasi dan umumnya hanya untuk penelitian, pendidikan, dan ilmu pengetahuan. Dengan adanya cagar alam, keseimbangan alam dan keanekaragaman hayati dapat tetap terjaga.</p>
+        </div>
+        <div class="card">
+            <h3>Citumang</h3>
+            <p>Citumang merupakan objek wisata alam di Pangandaran, Jawa Barat, yang terkenal dengan sungainya yang jernih dan berwarna hijau kebiruan. Lingkungan di sekitarnya masih alami dengan pepohonan yang rimbun dan udara yang sejuk. Aliran sungainya relatif tenang sehingga aman untuk berenang dan body rafting. Keindahan dan ketenangan alam membuat Citumang menjadi destinasi wisata yang menarik untuk dikunjungi.</p>
+        </div>
+		<div class="card">
+            <h3>Green Canyon</h3>
+            <p>Green Canyon adalah objek wisata alam yang terletak di Desa Kertayasa, Kecamatan Cijulang, Kabupaten Pangandaran, Jawa Barat. Tempat ini merupakan ngarai alami dengan sungai berair hijau jernih yang diapit oleh tebing-tebing batu kapur dan pepohonan yang rimbun.</p>
+        </div>
+    </div>
+</section>
+
+<section id="kuliner">
+    <h2>Kuliner</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Seafood Pangandaran</h3>
+            <p>Hidangan laut segar hasil tangkapan nelayan lokal.</p>
+        </div>
+        <div class="card">
+            <h3>Ikan Jambal Roti</h3>
+            <p>Oleh-oleh khas Pangandaran yang terkenal di Jawa Barat.</p>
+        </div>
+    </div>
+</section>
+ 
+<section id="booking">
+    <h2>Booking Hotel Terdekat</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3 id="namaPantai">Booking Hotel Terdakat</h3>
+
+           <form action="Booking.html" method="GET">
+                <input type="text" name="nama" placeholder="Nama Lengkap" required>
+                <input type="date" name="tanggal" required>
+                <input type="number" name="jumlah" placeholder="Jumlah Pengunjung" required>
+
+                <button type="submit">Pesan Sekarang</button>
+            </form>
+        </div>
+    </div> 
+	
+    <section id="galeri">
+        <h2>Galeri</h2>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Pantai_Pangandaran.jpg" alt="Pantai Pangandaran"> 
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/65/e4/0a/filename-green-canyon.jpg?w=1200&h=-1&s=1" alt="Green Canyon">
+            <img src="https://cnc-magazine.oramiland.com/parenting/images/wisata-pantai-batu-karas-3-l.width-800.format-webp.webp" alt="Batu Karas">
+			<img src="https://cdn.bandung-tour.com/wp-content/uploads/2022/10/Paket-Wisata-Pangandaran.webp" alt="Pangandaran">
+			<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikg7HZYVn5DZQn0uoOWgC1QdjljGvWKsQItLeLA8lOgiDgyMNqE3KiIza4uE0XVAN9IFV9XTHrehuV8s1AlP6xo-f5fsh3mrhi80AOWh0xARtNPq4ZPvbREdslpctYw1PVDkVlUgXD5aI/s1600/Lizard-island-snorkel.jpg" alt="Snorkeling">
+			<img src="https://experience.yoexplore.co.id/wp-content/uploads/2016/11/banana-boat-copy.jpg" alt="Banana">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SsIYBgXCBunrJd9FpAH3gPWqRaa0xpofWg&s" alt="Mobil">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfAvP31YjiJH3PSOsl31bxz4EfGYOU5EfoQ&s" alt="Seluncuran">
+			<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2zFlWtoOMUmqkNGmKqBdC5sGuNy-jGiJrX3gkNzfVbNkV_ia2D3O3HkwSv4xFib9pctf2cKFJfTAWYMJ6TuuZlvbdMOb2omVgrX0JadFfhSQWPnpXj6Skwnnl4znkDIpP9fA3Np7qMYI/s1600/rusa.jpg" alt="Rusa">
+		</div>
+    </section>
+    
+    <section id="kontak">
+        <h2>Kontak Kami</h2>
+        <p>Email: info@pangandaranwisata.com | Telepon: +62 123 456 789</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Pariwisata Pangandaran. Semua hak dilindungi.</p>
+    </footer>
+    
+    <script>
+        function toggleInfo(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
